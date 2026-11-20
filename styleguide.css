@@ -7,14 +7,55 @@
     /* Schrijf hier de verschillende stijlen, die
        gedeeld gaan worden door jullie projecten */
 
+
+    
+    :root {
+
+        /* Fonts */
+
+        --font-headings: "Georgia", serif;
+        --font-body: "Arial", sans-serif;
+        --font-size-h1: 2em;
+        --font-size-h2: 1.8em;
+        --font-size-h3: 1.4em;
+        --font-size-body: 1em;
+
+        /* Color */
+        --background: white;
+        --primary-text: black;
+        --secondary-text: #979797;
+        --accent-color: #4f2782;
+        --accent-color-light: #957db4;
+        --accent-color-lighter: #ede9f3;
+        --shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+
+
     /* Kleuren */
     .color-example {
-        background-color: #bada55;
+        background-color: var(--primary);
     }
 
     /* Typografie */
 
+    .heading-h1 {
+        font-size: var(font-size-h1);
+    }
 
+    .heading-h2 {
+        font-size: var(font-size-h2);
+    }
+
+    .heading-h3 {
+        font-size: var(--font-size-h3);
+    }
+    .body {
+        font-size: var(--font-size-body);
+    }
+
+    
     /* Formulier elementen */
 
 }
