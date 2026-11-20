@@ -2,19 +2,25 @@
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
    https://css-tricks.com/css-cascade-layers/ */
 
-@layer styleguide {
+    @layer styleguide {
 
     /* Schrijf hier de verschillende stijlen, die
        gedeeld gaan worden door jullie projecten */
 
 
-    
+    @font-face {
+        font-family: Gelasio;
+        src: url('../assets/Gelasio-VariableFont_wght.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+    }
     :root {
 
         /* Fonts */
 
-        --font-headings: "Georgia", serif;
+        --font-family: 'Gelasio', serif;
         --font-body: "Arial", sans-serif;
+
         --font-size-h1: 2em;
         --font-size-h2: 1.8em;
         --font-size-h3: 1.4em;
@@ -28,46 +34,79 @@
         --accent-color-light: #957db4;
         --accent-color-lighter: #ede9f3;
         --shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
-
     }
 
 
 
-    /* Kleuren */
-    .color-example {
-        background-color: var(--primary);
-    }
+/* Kleuren */
+.color-1 {
+    background-color: var(--background);
+}
+
+.color-2 {
+    background-color: var(--primary-text);
+}
+
+.color-3 {
+    background-color: var(--secondary-text);
+}
+
+.color-4 {
+    background-color: var(--accent-color);
+}
+
+.color-5 {
+    background-color: var(--accent-color-light);
+}
+
+.color-6 {
+    background-color: var(--accent-color-lighter);
+}
+
+figure {
+    display:block;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+figure code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    color: white;
+}
 
     /* Typografie */
 
     .heading-h1 {
-        font-size: var(font-size-h1);
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: var(--font-size-h1);
+        font-family: var(--font-family); 
         
-        .gelasio-<uniquifier> {
-        font-family: "Gelasio", serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-}
         
     }
 
     .heading-h2 {
-        font-size: var(font-size-h2);
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: var(--font-size-h2);
+        font-family: var(--font-family);
     }
 
     .heading-h3 {
         font-size: var(--font-size-h3);
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: var(--font-family);
     } 
 
     .body {
         font-size: var(--font-size-body);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--font-body);
     }
+
+p {
+    font-family: var(--font-body);
+}
 
     
     /* Formulier elementen */
