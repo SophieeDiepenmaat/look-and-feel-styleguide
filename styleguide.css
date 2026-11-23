@@ -2,7 +2,7 @@
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
    https://css-tricks.com/css-cascade-layers/ */
 
-    @layer styleguide {
+@layer styleguide {
 
     /* Schrijf hier de verschillende stijlen, die
        gedeeld gaan worden door jullie projecten */
@@ -14,6 +14,7 @@
         font-weight: 100 900;
         font-style: normal;
     }
+
     :root {
 
         /* Fonts */
@@ -38,55 +39,55 @@
 
 
 
-/* Kleuren */
-.color-1 {
-    background-color: var(--background);
-}
+    /* Kleuren */
+    .color-1 {
+        background-color: var(--background);
+    }
 
-.color-2 {
-    background-color: var(--primary-text);
-}
+    .color-2 {
+        background-color: var(--primary-text);
+    }
 
-.color-3 {
-    background-color: var(--secondary-text);
-}
+    .color-3 {
+        background-color: var(--secondary-text);
+    }
 
-.color-4 {
-    background-color: var(--accent-color);
-}
+    .color-4 {
+        background-color: var(--accent-color);
+    }
 
-.color-5 {
-    background-color: var(--accent-color-light);
-}
+    .color-5 {
+        background-color: var(--accent-color-light);
+    }
 
-.color-6 {
-    background-color: var(--accent-color-lighter);
-}
+    .color-6 {
+        background-color: var(--accent-color-lighter);
+    }
 
-figure {
-    display:block;
-    flex-direction: column;
-    align-items: center;
-    margin: 15px;
-}
+    figure {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+    }
 
-figure code {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    color: white;
-}
+    figure code {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        color: white;
+    }
 
     /* Typografie */
 
     .heading-h1 {
         font-size: var(--font-size-h1);
-        font-family: var(--font-family); 
-        
-        
+        font-family: var(--font-family);
+
+
     }
 
     .heading-h2 {
@@ -97,18 +98,173 @@ figure code {
     .heading-h3 {
         font-size: var(--font-size-h3);
         font-family: var(--font-family);
-    } 
+    }
 
     .body {
         font-size: var(--font-size-body);
         font-family: var(--font-body);
     }
 
-p {
-    font-family: var(--font-body);
-}
+    p {
+        font-family: var(--font-body);
+    }
 
-    
-    /* Formulier elementen */
+
+    /* Links */
+
+    a {
+        color: var(--accent-color);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    a:hover {
+        color: var(--accent-color-light);
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 3px;
+    }
+
+
+    /* Buttons */
+
+    button,
+    input[type="submit"],
+    input[type="button"] {
+        background-color: var(--accent-color);
+        color: white;
+        border: 1px solid var(--accent-color);
+        border-radius: 3px;
+        padding: 10px 16px;
+        font-family: var(--font-body);
+        font-size: var(--font-size-body);
+        cursor: pointer;
+    }
+
+    button:hover,
+    input[type="submit"]:hover,
+    input[type="button"]:hover {
+        background-color: var(--accent-color-light);
+        border-color: var(--accent-color-light);
+    }
+
+    button:focus-visible,
+    input[type="submit"]:focus-visible,
+    input[type="button"]:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 3px;
+    }
+
+
+    /* Formuliervelden */
+
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="range"]),
+    textarea,
+    select {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        border: 1px solid var(--secondary-text);
+        border-radius: 3px;
+        font-family: var(--font-body);
+        font-size: var(--font-size-body);
+        box-sizing: border-box;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: 2px solid var(--accent-color-light);
+        border-color: var(--accent-color);
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+
+    /* Radio buttons en checkboxes */
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        accent-color: var(--accent-color);
+        cursor: pointer;
+    }
+
+
+    /* Range slider */
+
+    input[type="range"] {
+        accent-color: var(--accent-color);
+        cursor: pointer;
+    }
+
+
+    /* Labels en fieldsets */
+
+    label {
+        font-family: var(--font-body);
+        font-size: var(--font-size-body);
+        cursor: pointer;
+    }
+
+    fieldset {
+        border: 1px solid var(--secondary-text);
+        border-radius: 3px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    legend {
+        font-family: var(--font-body);
+        font-weight: bold;
+    }
+
+
+    /* Tabellen */
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: var(--font-body);
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid var(--secondary-text);
+    }
+
+    th {
+        font-family: var(--font-family);
+    }
+
+
+    /* Lijsten */
+
+    ul,
+    ol {
+        font-family: var(--font-body);
+        padding-left: 25px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+
+    /* Quotes */
+
+    blockquote {
+        border-left: 3px solid var(--accent-color);
+        padding-left: 15px;
+        margin-left: 0;
+        font-family: var(--font-body);
+        font-style: italic;
+    }
 
 }
