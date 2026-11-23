@@ -81,6 +81,15 @@
         color: white;
     }
 
+
+    /* Witte kleurcirkel */
+
+    figure code.color-1 {
+        border: 1px solid var(--primary-text);
+        color: var(--primary-text);
+        box-sizing: border-box;
+    }
+
     /* Typografie */
 
     .heading-h1 {
